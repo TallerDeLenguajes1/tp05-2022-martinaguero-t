@@ -1,24 +1,73 @@
-﻿Console.WriteLine("1) Programa para invertir un número de N cifras:");
+﻿Console.WriteLine("2) Programa para la Calculadora V1: ");
 
-Console.WriteLine("Ingrese el número a invertir:");
+int seguirOperando = 1, numOperacion = 0, num1, num2;
 
-int num = Convert.ToInt32(Console.ReadLine());
-// Se lee el numero ingresado por el usuario
+do
+{
+    Console.WriteLine("¿Qué operación desea realizar?");
 
-int numReverso = 0;
-int ultimoDigito = 0;
+    do
+    {
+        Console.WriteLine("1) Suma \n2) Resta \n3) Multiplicación \n4) División ");
+        numOperacion = Convert.ToInt32(Console.ReadLine());
+        
+    } while (numOperacion < 1 || numOperacion > 4);
 
-while(num > 0 && num != 0){
+    Console.WriteLine("Ingrese los números a operar en el orden dado.");
 
-    ultimoDigito = num % 10;
-    // Obtengo el último digito del numero
+    Console.WriteLine("Numero 1:");
+    num1 = Convert.ToInt32(Console.ReadLine());
 
-    numReverso = numReverso * 10 + ultimoDigito;
-    // En el número reverso voy guardando los números cada vez multiplicando por 10 para luego sumar el último digito a añadir 
+    Console.WriteLine("Numero 2:");
+    num2 = Convert.ToInt32(Console.ReadLine());
 
-    num = num/10;
-    // Divido el numero original en 10 de manera sucesiva
+    if (numOperacion == 4)
+    {
+        do
+        {
+            Console.WriteLine("No esta definida la división en cero. Ingrese un divisor válido.");
+            num2 = Convert.ToInt32(Console.ReadLine());
+        } while (num2 == 0);
+    }
 
+    switch (numOperacion)
+    {
+        case 1: 
+            Console.WriteLine($"El resultado de la suma es: {Sumar(num1,num2)}");
+            break;
+        case 2: 
+            Console.WriteLine($"El resultado de la resta es: {Restar(num1,num2)}");
+            break;
+        case 3: 
+            Console.WriteLine($"El resultado del producto es: {Multiplicar(num1,num2)}");
+            break;
+        case 4: 
+            Console.WriteLine($"El resultado de la división es: {Dividir(num1,num2)}");
+            break;
+    }
+
+    do
+    {
+        Console.WriteLine("¿Desea seguir usando la calculadora? (1: sí, 0: no)");
+        seguirOperando = Convert.ToInt32(Console.ReadLine());
+
+    } while (seguirOperando < 0 || seguirOperando > 1);
+
+} while (seguirOperando == 1);
+
+
+int Sumar(int num1, int num2){
+    return num1+num2;
 }
 
-Console.WriteLine($"El número reverso es {numReverso}. Si ingresó un número menor o igual a cero se muestra como resultado 0.");
+int Restar(int num1, int num2){
+    return num1-num2;
+}
+
+int Multiplicar(int num1, int num2){
+    return num1*num2;
+}
+
+int Dividir(int num1, int num2){
+    return num1/num2;
+}
