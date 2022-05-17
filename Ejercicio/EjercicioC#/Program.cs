@@ -8,7 +8,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 int numReverso = 0;
 int ultimoDigito = 0;
 
-while(num != 0){
+while(num > 0 && num != 0){
 
     ultimoDigito = num % 10;
     // Obtengo el último digito del numero
@@ -21,4 +21,4 @@ while(num != 0){
 
 }
 
-Console.WriteLine($"El número reverso es {numReverso}");
+Console.WriteLine($"El número reverso es {numReverso}. Si ingresó un número menor o igual a cero se muestra como resultado 0.");
