@@ -23,11 +23,10 @@ do
 
     if (numOperacion == 4)
     {
-        do
-        {
+        while(num2 == 0){
             Console.WriteLine("No esta definida la división en cero. Ingrese un divisor válido.");
             num2 = Convert.ToInt32(Console.ReadLine());
-        } while (num2 == 0);
+        }
     }
 
     switch (numOperacion)
