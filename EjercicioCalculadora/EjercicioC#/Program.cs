@@ -36,22 +36,22 @@ do
         switch (numOperacion)
         {
             case 1: 
-                Console.WriteLine($"El resultado de la suma es: {Sumar(num1,num2)}");
+                Console.WriteLine($"El resultado de sumar {num1} y {num2} es: {Sumar(num1,num2)}");
                 break;
             case 2: 
-                Console.WriteLine($"El resultado de la resta es: {Restar(num1,num2)}");
+                Console.WriteLine($"El resultado de restar {num1} y {num2} es: {Restar(num1,num2)}");
                 break;
             case 3: 
-                Console.WriteLine($"El resultado del producto es: {Multiplicar(num1,num2)}");
+                Console.WriteLine($"El resultado del producto de {num1} por {num2} es: {Multiplicar(num1,num2)}");
                 break;
             case 4: 
-                Console.WriteLine($"El resultado de la división es: {Dividir(num1,num2)}");
+                Console.WriteLine($"El resultado de la división de {num1} en {num2} es: {Dividir(num1,num2)}");
                 break;
             case 11:
-                Console.WriteLine($"El máximo número es {maximo(num1,num2)}");
+                Console.WriteLine($"El máximo número entre {num1} y {num2} es {maximo(num1,num2)}");
                 break;
             case 12:
-                Console.WriteLine($"El mínimo número es {minimo(num1,num2)}");
+                Console.WriteLine($"El mínimo número entre {num1} y {num2} es {minimo(num1,num2)}");
                 break;
         }
 
@@ -69,22 +69,22 @@ do
 
         switch(numOperacion){
             case 5:
-                Console.WriteLine($"El valor absoluto es: {Math.Abs(num1)}");
+                Console.WriteLine($"El valor absoluto de {num1} es: {Math.Abs(num1)}");
                 break;
             case 6:
-                Console.WriteLine($"El cuadrado del número es: {Math.Pow(num1,2)}");
+                Console.WriteLine($"El cuadrado de {num1} es: {Math.Pow(num1,2)}");
                 break;
             case 7:
-                Console.WriteLine($"La raíz cuadrada del número es: {Math.Sqrt(num1)}");
+                Console.WriteLine($"La raíz cuadrada de {num1} es: {Math.Sqrt(num1)}");
                 break;
             case 8:
-                Console.WriteLine($"El seno del número es: {Math.Sin(num1)}");
+                Console.WriteLine($"El seno de {num1} es: {Math.Sin(num1)}");
                 break;
             case 9:
-                Console.WriteLine($"El coseno del número es: {Math.Cos(num1)}");
+                Console.WriteLine($"El coseno de {num1} es: {Math.Cos(num1)}");
                 break;
             case 10:
-                Console.WriteLine($"La parte entera del float es: {Math.Truncate(num1)}");
+                Console.WriteLine($"La parte entera del float {num1} es: {Math.Truncate(num1)}");
                 break;
         }
     }
