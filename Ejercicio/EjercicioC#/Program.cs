@@ -10,14 +10,13 @@ do
 
     do
     {
-        Console.WriteLine("5) Calcular valor absoluto \n6) Calcular cuadrado del número \n7) Calcular raíz cuadrada \n8) Calcular seno del número \n 9) Calcular coseno \n10) Obtener parte entera de un número en punto flotante ");
+        Console.WriteLine("5) Calcular valor absoluto \n6) Calcular cuadrado del número \n7) Calcular raíz cuadrada \n8) Calcular seno del número \n9) Calcular coseno \n10) Obtener parte entera de un número en punto flotante ");
         numOperacion = Convert.ToInt32(Console.ReadLine());
         
     } while (numOperacion < 5 || numOperacion > 10);
 
     Console.WriteLine("Ingrese el número a operar: ");
 
-    Console.WriteLine("Numero 1:");
     num1 = Convert.ToDouble(Console.ReadLine());
 
     if(numOperacion == 7){
@@ -50,6 +49,28 @@ do
             break;
     }
 
+    Console.WriteLine("Ingrese dos números para calcular el máximo o el mínimo de los dos. Si los dos números son iguales, se retornará num1: ");
+    
+    Console.WriteLine("Número 1: ");
+    num1 = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine("Número 2: ");
+    num2 = Convert.ToDouble(Console.ReadLine());
+
+    do
+    {
+        Console.WriteLine("Calcular: 11) el máximo, 12) el mínimo ");
+
+        numOperacion = Convert.ToInt32(Console.ReadLine());
+
+    } while (numOperacion < 11 || numOperacion > 12);
+
+    if(numOperacion == 11){
+        Console.WriteLine($"El máximo número es {maximo(num1,num2)}");
+    } else {
+        Console.WriteLine($"El mínimo número es {minimo(num1,num2)}");
+    }
+
     do
     {
         Console.WriteLine("¿Desea seguir usando la calculadora? (1: sí, 0: no)");
@@ -59,3 +80,18 @@ do
 
 } while (seguirOperando == 1);
 
+double minimo(double num1, double num2){
+    if(num1<=num2){
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+double maximo(double num1, double num2){
+    if(num1>=num2){
+        return num1;
+    } else {
+        return num2;
+    }
+}
