@@ -1,6 +1,4 @@
-﻿
-
-Console.WriteLine("4) Programa trabajando con el tipo string:");
+﻿Console.WriteLine("4) Programa trabajando con el tipo string:");
 
 Console.WriteLine("Ingrese una cadena: ");
 string cadena1 = Console.ReadLine();
