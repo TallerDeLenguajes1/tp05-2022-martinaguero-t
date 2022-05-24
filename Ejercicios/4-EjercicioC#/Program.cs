@@ -1,18 +1,21 @@
 ﻿Console.WriteLine("4) Programa trabajando con el tipo string:");
 
 Console.WriteLine("Ingrese una cadena: ");
-string cadena1 = Console.ReadLine();
-
-// CONSULTA: ¿A qué se refiere con obtener algunas letras que forman parte de la cadena?
+string cadena1 = Console.ReadLine()!;
+// Operador ! - null forgiving operator
 
 // Obtener la longitud de la cadena:
 
-int longitudCadena = cadena1.Length;
+int longitudCadena = cadena1!.Length;
+
+var rand = new Random();
+Console.WriteLine("Tomo un caracter aleatorio de la cadena: " + cadena1[rand.Next(0,longitudCadena)]);
+
 
 Console.WriteLine($"La longitud de la cadena es {longitudCadena}");
 
 Console.WriteLine("Ingrese otra cadena: ");
-string cadena2 = Console.ReadLine();
+string? cadena2 = Console.ReadLine();
 
 // Concatenar cadenas
 string cadenaConcatenada = cadena1+cadena2;
@@ -45,7 +48,7 @@ Console.WriteLine(cadenaConcatenada.ToUpper());
 
 Console.WriteLine("Ingrese una nueva cadena, se comparará con la cadena concatenada:");
 
-string nuevaCadena = Console.ReadLine();
+string? nuevaCadena = Console.ReadLine();
 
 Console.WriteLine($"Comparando con == : {nuevaCadena == cadenaConcatenada}");
 
@@ -69,7 +72,7 @@ foreach (string subCadena in arregloSplit)
 
 Console.WriteLine("Indique una operación aritmética básica a realizar (suma, resta, multiplicación o división): ");
 
-string operacion = Console.ReadLine();
+string? operacion = Console.ReadLine();
 
 if(operacion.Contains('+')){
     double resultado = Convert.ToDouble(operacion.Split('+')[0]) + Convert.ToDouble(operacion.Split('+')[1]);
